@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --watchAll --coverage",
+    "generate": "ts-node src/gerador_arquivos.ts"
   },
   "keywords": [],
   "author": "",
