@@ -5,7 +5,6 @@ import { setLocale, name, phone, date, internet } from "faker";
 setLocale("pt_BR");
 
 const contatos = [];
-let linhasCSV = "";
 
 const numeroContatos = 100;
 
@@ -19,7 +18,6 @@ for (let i = 0; i < numeroContatos; i++) {
 
   contatos.push(obj);
   const linha = `${obj.nome},${obj.telefone},${obj.email},${obj.dataNascimento},`;
-  linhasCSV += linha + "\n";
 }
 
 const caminhoDiretorioArquivos = join(__dirname, "data");
@@ -27,7 +25,4 @@ const strJson = JSON.stringify(contatos);
 const caminhoArquivoJSON = join(caminhoDiretorioArquivos, "contatos.json");
 writeFileSync(caminhoArquivoJSON, strJson);
 
-const caminhoArquivoCSV = join(caminhoDiretorioArquivos, "contatos.csv");
-writeFileSync(caminhoArquivoCSV, strJson);
-
-console.log("Arquivos foram gravados");
+console.log("Arquivo foi gerado");

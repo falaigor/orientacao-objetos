@@ -1,6 +1,4 @@
-import { ContaBancaria } from "./models/ContaBancaria";
+import { ContatoJsonDAO } from "./model/dao/ContatoJsonDAO";
 
-const conta = new ContaBancaria();
-conta.depositar(50);
-conta.sacar(20);
-console.log(conta);
+const contatoDAO = new ContatoJsonDAO();
+console.log(contatoDAO.recuperaContatos());
